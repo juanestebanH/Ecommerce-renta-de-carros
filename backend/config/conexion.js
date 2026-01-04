@@ -1,15 +1,11 @@
-// Cargar variables de entorno
 require('dotenv').config();
-
 const { createClient } = require('@supabase/supabase-js');
 
-// Crear la conexión a Supabase
 const supabase = createClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_KEY
 );
 
-// Verificar conexión
 async function verificarConexion() {
   const { data, error } = await supabase
     .from('carros')
@@ -23,6 +19,9 @@ async function verificarConexion() {
   }
 }
 
-verificarConexion();
+// Solo en local
+if (!process.env.RENDER) {
+  verificarConexion();
+}
 
 module.exports = supabase;

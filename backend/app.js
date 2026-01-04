@@ -44,6 +44,7 @@ app.use('/api/marcas', marcasRoutes);
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Start the server
-app.listen(3000, () => {
-  console.log('Server corriendo en http://localhost:3000');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
