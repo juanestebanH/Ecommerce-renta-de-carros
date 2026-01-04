@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+@import 'leaflet/dist/leaflet.css';
+
+* {
+  font-family: 'Poppins';
+  color: '#111111';
+}
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cat1 {
+  background-image: url('./assets/cat1.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.cat2 {
+  background-image: url('./assets/cat2.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.cat3 {
+  background-image: url('./assets/cat3.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.cat4 {
+  background-image: url('./assets/cat4.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 0 !important;
+}
