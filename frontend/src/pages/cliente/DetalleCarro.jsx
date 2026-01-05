@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import Volver from '../../components/cliente/volver';
+import Volver from '../../components/cliente/Volver';
 import { useEffect, useState } from 'react';
 import { helpHttp } from '../../helpers/helperHttp';
 import { CircleCheck, Shield } from 'lucide-react';
