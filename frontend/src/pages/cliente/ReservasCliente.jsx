@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import CardReservas from '../../components/cliente/cardReservas';
+import CardReservas from '../../components/cliente/CardReservas';
 import { Clock3, Calendar } from 'lucide-react';
 
 function ReservasCliente() {
