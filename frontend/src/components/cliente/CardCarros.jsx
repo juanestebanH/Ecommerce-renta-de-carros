@@ -77,7 +77,7 @@ function CardCarros({ filtros }) {
           >
             <div className="overflow-hidden rounded-t-lg">
               <img
-                src={`http://localhost:3000/uploads/${carro.foto}`}
+                src={`https://ecommerce-renta-de-carros.onrender.com/api/uploads/${carro.foto}`}
                 alt={carro.nombre}
                 className="w-full h-60 object-cover object-center transition-transform duration-300 hover:scale-110"
               />

@@ -2,7 +2,7 @@
 
 export const helpHttp = () => {
   // url de la api
-  const API_URL = 'http://localhost:3000/api/';
+  const API_URL = 'https://ecommerce-renta-de-carros.onrender.com/api/';
   const customFetch = (endpoint, options) => {
     const defaultHeader = {
       accept: 'application/json',
