@@ -1,6 +1,6 @@
 const carrosModel = require('../../models/admin/carrosModel');
 const marcasModel = require('../../models/admin/marcasModel');
-const supabase = require('../../config/supabase'); // 🔥 IMPORTANTE
+const supabase = require('../../config/conexion'); // 🔥 IMPORTANTE
 
 const carrosControllers = {
   AgregarVehiculo: async (req, res) => {
@@ -78,16 +78,23 @@ const carrosControllers = {
     const extension = file.originalname.split('.').pop();
     const nombreArchivo = `${placa}.${extension}`;
 
-    const { error } = await supabase.storage
+    const { data, error } = await supabase.storage
       .from('carros')
       .upload(nombreArchivo, file.buffer, {
         contentType: file.mimetype,
         upsert: true,
       });
 
-    if (error) throw error;
+    if (error) {
+      console.error('❌ Error subiendo imagen:', error);
+      throw error;
+    }
 
-    return nombreArchivo;
+    const { data: publicUrlData } = supabase.storage
+      .from('carros')
+      .getPublicUrl(nombreArchivo);
+
+    return publicUrlData.publicUrl;
   },
 
   ListarCarros: async (req, res) => {

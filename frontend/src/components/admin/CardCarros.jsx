@@ -153,7 +153,7 @@ function CardCarros({ filtros }) {
               className="w-full  bg-white  border-2 border-[#B2B2B2] rounded-lg shadow-md"
             >
               <img
-                src={`http://localhost:3000/uploads/${carro.foto}`}
+                src={carro.foto}
                 alt={carro.nombre}
                 className="w-full h-60 object-cover object-center mb-4 rounded-t-lg"
               />
