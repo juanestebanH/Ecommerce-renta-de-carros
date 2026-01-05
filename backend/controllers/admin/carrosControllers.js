@@ -1,6 +1,6 @@
 const carrosModel = require('../../models/admin/carrosModel');
 const marcasModel = require('../../models/admin/marcasModel');
-const supabase = require('../../config/conexion'); // 🔥 IMPORTANTE
+const supabase = require('../../config/conexion');
 
 const carrosControllers = {
   AgregarVehiculo: async (req, res) => {
@@ -54,8 +54,11 @@ const carrosControllers = {
         }
       }
 
-      // 🔥 NUEVA FOTO (SUPABASE)
       if (req.file) {
+        if (carroExistente.foto) {
+          await carrosControllers.EliminarFotoSupabase(carroExistente.foto);
+        }
+
         data.foto = await carrosControllers.GuardarFoto(req.file, placa);
       }
 
@@ -133,6 +136,23 @@ const carrosControllers = {
       res
         .status(500)
         .json({ message: 'Error al obtener el detalle del vehículo' });
+    }
+  },
+
+  EliminarFotoSupabase: async (url) => {
+    if (!url) return;
+
+    // Extraer nombre del archivo desde la URL
+    const nombreArchivo = url.split('/').pop();
+
+    const { error } = await supabase.storage
+      .from('carros')
+      .remove([nombreArchivo]);
+
+    if (error) {
+      console.error('❌ Error eliminando imagen:', error);
+    } else {
+      console.log('🗑️ Imagen eliminada:', nombreArchivo);
     }
   },
 };
