@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Volver from '../../components/cliente/volver';
+import Volver from '../../components/cliente/Volver';
 import { CreditCard, CircleDollarSign, CircleQuestionMark } from 'lucide-react';
 import ResumenRenta from '../../components/cliente/ResumenRenta';
 import { useLocation } from 'react-router-dom';
