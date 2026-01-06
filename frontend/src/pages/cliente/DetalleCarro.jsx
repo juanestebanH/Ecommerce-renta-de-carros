@@ -119,7 +119,7 @@ function DetalleCarro() {
 
             <div className="bg-white rounded-xl shadow-md p-4 mt-6">
               <img
-                src={`http://localhost:3000/uploads/${Detalle.foto}`}
+                src={Detalle.foto}
                 alt={Detalle.nombre}
                 className="w-full h-60 object-contain object-center rounded-xl"
               />
