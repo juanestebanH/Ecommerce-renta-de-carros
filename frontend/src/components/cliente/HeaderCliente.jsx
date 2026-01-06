@@ -103,7 +103,7 @@ function HeaderCliente() {
                   Reservas
                 </a>
                 <a
-                  href="#ubicaciones"
+                  href="/ubicaciones"
                   className="transition-colors hover:font-medium"
                 >
                   Ubicaciones
