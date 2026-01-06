@@ -67,11 +67,14 @@ function Servicios() {
               key={index}
               className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
-              <img
-                src={service.image}
-                alt={service.title}
-                className="w-full h-60 object-cover"
-              />
+              <div className="overflow-hidden rounded-t-lg">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-60 object-cover transition-transform duration-300 hover:scale-110"
+                />
+              </div>
+
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {service.title}
