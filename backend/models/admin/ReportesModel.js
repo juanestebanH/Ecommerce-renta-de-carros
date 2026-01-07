@@ -101,7 +101,7 @@ const reportesModel = {
           )
         `
         )
-        .neq('estado', 'desactivado');
+        .neq('carros.estado', 'desactivado');
 
       if (error) throw error;
 
