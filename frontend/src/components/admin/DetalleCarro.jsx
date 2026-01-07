@@ -96,7 +96,7 @@ function DetalleCarro({ carro, onClose }) {
   };
 
   return (
-    <div className="bg-[#6B7280]/60 absolute top-0 left-0 w-full h-full flex justify-center items-center bg-opacity-50">
+    <div className="bg-[#6B7280]/60 absolute top-0 left-0 w-full min-h-screen flex justify-center items-center bg-opacity-50">
       <div className="bg-white px-8 py-4 rounded-lg ">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-lg ">Detalle del Carro </h2>
@@ -111,9 +111,9 @@ function DetalleCarro({ carro, onClose }) {
 
           <div>
             <img
-              src={`http://localhost:3000/uploads/${detalle.foto}`}
+              src={detalle.foto}
               alt={detalle.nombre}
-              className="w-70 h-60 object-cover object-center  rounded-lg"
+              className="w-90 h-65 object-cover object-center  rounded-lg"
             />
           </div>
         </div>

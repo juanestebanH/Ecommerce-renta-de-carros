@@ -85,7 +85,10 @@ const reportesModel = {
 
   reportePorCategoria: async () => {
     try {
-      const { data, error } = await supabase.from('categorias').select(`
+      const { data, error } = await supabase
+        .from('categorias')
+        .select(
+          `
           nombre,
           carros:carros!carros_id_categoria_fkey (
             id_carro,
@@ -96,7 +99,9 @@ const reportesModel = {
               )
             )
           )
-        `);
+        `
+        )
+        .neq('estado', 'desactivado');
 
       if (error) throw error;
 

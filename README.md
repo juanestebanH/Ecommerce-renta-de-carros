@@ -48,9 +48,11 @@ Demo:
 - Despliegue en Render
 - Almacenamiento de imágenes en la nube (no local)
 
+---
+
 ## 📸 Capturas del sistema
 
-### Cliente
+## Cliente
 
 ![Home Cliente](screenshots/webinicio.png)
 
@@ -63,3 +65,22 @@ Demo:
 ![gestion de renta](screenshots/renta.png)
 
 ![historial de reservas](screenshots/reservas.png)
+
+## Administrador
+
+![Dashboard Admin](screenshots/dashborad.png)
+
+![Gestión de vehículos](screenshots/admincarros.png)
+
+![Gestión de rentas](screenshots/adminrentas.png)
+
+![Gestión de clientes/usuarios](screenshots/adminclientes.png)
+
+![Gestión de reportes](screenshots/adminreportes.png)
+
+---
+
+## 👨‍💻 Autor
+
+Juan Esteban Hoyos
+Desarrollador de Software
